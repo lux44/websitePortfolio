@@ -90,7 +90,7 @@
         .tabs {
             flex-grow: 1;
             padding: 20px;
-            background: yellow;
+            background: #0B1323;
         }
 
         .tab-content {
@@ -101,7 +101,8 @@
         #tab1:checked~.tab-container .tabs #content1,
         #tab2:checked~.tab-container .tabs #content2,
         #tab3:checked~.tab-container .tabs #content3,
-        #tab4:checked~.tab-container .tabs #content4 {
+        #tab4:checked~.tab-container .tabs #content4,
+        #tab5:checked~.tab-container .tabs #content5 {
             display: block;
         }
 
@@ -109,7 +110,8 @@
         #tab1:checked~.tab-container .tab-menu label[for="tab1"],
         #tab2:checked~.tab-container .tab-menu label[for="tab2"],
         #tab3:checked~.tab-container .tab-menu label[for="tab3"],
-        #tab4:checked~.tab-container .tab-menu label[for="tab4"] {
+        #tab4:checked~.tab-container .tab-menu label[for="tab4"],
+        #tab5:checked~.tab-container .tab-menu label[for="tab5"] {
             color: #91FCDC;
             font-weight: bold;
         }
@@ -199,23 +201,25 @@
             </div>
 
         </section>
-        <section>
+        <section style="height: 700px;">
             <input type="radio" name="tab" id="tab1" checked>
             <input type="radio" name="tab" id="tab2">
             <input type="radio" name="tab" id="tab3">
             <input type="radio" name="tab" id="tab4">
+            <input type="radio" name="tab" id="tab5">
 
             <div style="padding:15px 0px;">
                 <span style="color: #91FCDC;">02.</span>
-                <span style="color: CED6F3; font-weight: 500; font-size: 35px;">Skills</span>
+                <span style="color: #CED6F3; font-weight: 500; font-size: 35px;">Skills</span>
             </div>
 
             <div class="tab-container">
                 <div class="tab-menu">
                     <label for="tab1">Language</label>
-                    <label for="tab2">메뉴 2</label>
-                    <label for="tab3">메뉴 3</label>
-                    <label for="tab4">메뉴 4</label>
+                    <label for="tab2">FrontEnd</label>
+                    <label for="tab3">BackEnd</label>
+                    <label for="tab4">Database</label>
+                    <label for="tab5">etc</label>
                 </div>
 
                 <div class="tabs">
@@ -232,10 +236,48 @@
                                 <span>기본적인 태그</span>
                             </div>
                         </div>
+                        <div style="display: flex; flex-direction: row; margin-top: 15px; border: solid #91FCDC;">
+                            <img src="./image/my_github_profile.png" alt="" width="80px" height="80px">
+                            <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                <span style="color: #8A92AD; font-weight: 500; font-size: 25px;">CSS</span>
+                                <span>기본적인 태그</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; margin-top: 15px; border: solid #91FCDC;">
+                            <img src="./image/my_github_profile.png" alt="" width="80px" height="80px">
+                            <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                <span style="color: #8A92AD; font-weight: 500; font-size: 25px;">Kotlin</span>
+                                <span>기본적인 태그</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; margin-top: 15px; border: solid #91FCDC;">
+                            <img src="./image/my_github_profile.png" alt="" width="80px" height="80px">
+                            <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                <span style="color: #8A92AD; font-weight: 500; font-size: 25px;">Java</span>
+                                <span>기본적인 태그</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; margin-top: 15px; border: solid #91FCDC;">
+                            <img src="./image/my_github_profile.png" alt="" width="80px" height="80px">
+                            <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                <span style="color: #8A92AD; font-weight: 500; font-size: 25px;">C</span>
+                                <span>기본적인 태그</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-content" id="content2">
-                        <h3>콘텐츠 2</h3>
-                        <p>이곳은 메뉴 2의 콘텐츠입니다.</p>
+                        <div style="display: flex; flex-direction: row;">
+                            <span style="color: #CED6F3; font-size: 25px;">Skill Stack</span>
+                            <span style="color: #91FCDC; font-size: 25px; margin-left: 5px;">@ </span>
+                            <span style="color: #91FCDC; font-size: 25px; margin-left: 5px;">FrontEnd</span>
+                        </div>
+                        <div style="display: flex; flex-direction: row; margin-top: 15px; border: solid #91FCDC;">
+                            <img src="./image/my_github_profile.png" alt="" width="80px" height="80px">
+                            <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                <span style="color: #8A92AD; font-weight: 500; font-size: 25px;">Android</span>
+                                <span>기본적인 태그</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-content" id="content3">
                         <h3>콘텐츠 3</h3>
