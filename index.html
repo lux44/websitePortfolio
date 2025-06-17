@@ -1,0 +1,241 @@
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #0B1323;
+            color: white;
+            font-size: 20px;
+        }
+
+        section {
+            width: 75%;
+            min-height: 500px;
+            border: 2px solid red;
+            margin-bottom: 50px;
+        }
+
+        .section1 {
+            margin-top: 10px;
+        }
+
+        .aboutMeTextBox {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+
+        .unitText {
+            font-size: 25px;
+            color: #CED6F3;
+            margin-top: 10px;
+        }
+
+        .describeText {
+            color: #8A92AD;
+            margin-top: 10px;
+        }
+
+        .languageButtonText {
+            color: #8A92AD;
+            font-size: 16px;
+            outline: none;
+            border: none;
+            background: none;
+            font-weight: 100;
+            padding: 10px;
+            text-align: left;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .tab-container {
+            display: flex;
+            border: 1px solid #ccc;
+            min-height: 200px;
+        }
+
+        .tab-menu {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            border-right: 2px solid #ccc;
+        }
+
+        .tab-menu label {
+            padding: 15px;
+            cursor: pointer;
+            background: gray;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .tab-menu label:hover {
+            background: lightgray;
+        }
+
+        .tabs {
+            flex-grow: 1;
+            padding: 20px;
+            background: yellow;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        /* 선택된 탭 콘텐츠 보이기 */
+        #tab1:checked~.tab-container .tabs #content1,
+        #tab2:checked~.tab-container .tabs #content2,
+        #tab3:checked~.tab-container .tabs #content3,
+        #tab4:checked~.tab-container .tabs #content4 {
+            display: block;
+        }
+
+        /* 선택된 탭 메뉴 강조 */
+        #tab1:checked~.tab-container .tab-menu label[for="tab1"],
+        #tab2:checked~.tab-container .tab-menu label[for="tab2"],
+        #tab3:checked~.tab-container .tab-menu label[for="tab3"],
+        #tab4:checked~.tab-container .tab-menu label[for="tab4"] {
+            background: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+        <section>
+            <div style="padding:15px 0px; display: flex; flex-direction: column;">
+                <span class="section1" style="color: #91FCDC;">안녕하세요</span>
+                <span class="section1" style="font-size: 60px; color: #CED6F3; font-weight: 600;">손현정입니다.</span>
+                <span class="section1" style="font-size: 60px; font-weight: 600; color: #8A92AD;">그냥 아무말</span>
+                <span class="section1" style="color: #8A92AD;">부가설명 어쩌고저쩌고</span>
+                <div class="section1" style="display: flex; flex-direction: row;">
+                    <a href="https://couquedasse-developer.tistory.com/"><img
+                            style="width: 30px; height: 30px; margin-right: 15px; filter: invert(86%) sepia(28%) saturate(502%) hue-rotate(101deg) brightness(102%) contrast(98%);"
+                            src="./image/blog_image.png" alt="tistory"></a>
+                    <a href="https://github.com/lux44" target="_blank"><img
+                            style="width: 30px; height: 30px; margin-right: 15px; filter: invert(86%) sepia(28%) saturate(502%) hue-rotate(101deg) brightness(102%) contrast(98%);"
+                            src="./image/github_image3.png" alt="github"></a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!-- About Me -->
+            <div style="padding:15px 0px;">
+                <span style="color: 91FCDC;">01.</span>
+                <span style="color: CED6F3; font-weight: 500; font-size: 35px;"> About me</span>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: flex; width: 75%; flex-direction: column;">
+                    <div class="aboutMeTextBox">
+                        <span class="unitText">[시시각각 변하는 화면]</span>
+                        <span class="describeText">is a dummy or placeholder text commonly used in graphic design,
+                            publishing, and web development. Its purpose is to per</span>
+                    </div>
+                    <div class="aboutMeTextBox">
+                        <span class="unitText">[시시각각 변하는 화면]</span>
+                        <span class="describeText">is a dummy or placeholder text commonly used in graphic design,
+                            publishing, and web development. Its purpose is to per</span>
+                    </div>
+                    <div class="aboutMeTextBox">
+                        <span class="unitText">[시시각각 변하는 화면]</span>
+                        <span class="describeText">is a dummy or placeholder text commonly used in graphic design,
+                            publishing, and web development. Its purpose is to per</span>
+                    </div>
+                </div>
+                <div style="position: relative;display: flex; width: 25%; height: auto;">
+                    <div style="width: 100%;">
+                        <img style="width: 100%; height: auto;" src="./image/my_github_profile.png" alt="profile image">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div style="padding:15px 0px;">
+                <span style="color: 91FCDC;">02.</span>
+                <span style="color: CED6F3; font-weight: 500; font-size: 35px;">Skills</span>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div>
+                    <!-- 프로그레스 막대?? -->
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <button class="languageButtonText">Language</button>
+                    <button class="languageButtonText">Frontend</button>
+                    <button class="languageButtonText">BackEnd</button>
+                    <button class="languageButtonText">Database</button>
+                    <button class="languageButtonText">etc</button>
+                </div>
+                <div style="margin-left: 10px;">
+                    <div style="display: flex; flex-direction: row;">
+                        <span style="color: #CED6F3; font-size: 25px;">Skill Stack</span>
+                        <span style="color: #91FCDC; font-size: 25px; margin-left: 5px;">@ </span>
+                        <span style="color: #91FCDC; font-size: 25px; margin-left: 5px;">Language</span>
+                    </div>
+                    <div style="display: flex; flex-direction: row; margin-top: 15px; ">
+                        <img src="./image/my_github_profile.png" alt="" width="80px" height="80px">
+                        <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                            <span style="color: #8A92AD; font-weight: 500; font-size: 25px;">HTML</span>
+                            <span>기본적인 태그</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <input type="radio" name="tab" id="tab1" checked>
+            <input type="radio" name="tab" id="tab2">
+            <input type="radio" name="tab" id="tab3">
+            <input type="radio" name="tab" id="tab4">
+
+            <div class="tab-container">
+                <div class="tab-menu">
+                    <label for="tab1">메뉴 1</label>
+                    <label for="tab2">메뉴 2</label>
+                    <label for="tab3">메뉴 3</label>
+                    <label for="tab4">메뉴 4</label>
+                </div>
+
+                <div class="tabs">
+                    <div class="tab-content" id="content1">
+                        <div style="display: flex; flex-direction: row; margin-top: 15px; ">
+                            <img src="./image/my_github_profile.png" alt="" width="80px" height="80px">
+                            <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                <span style="color: #8A92AD; font-weight: 500; font-size: 25px;">HTML</span>
+                                <span>기본적인 태그</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content2">
+                        <h3>콘텐츠 2</h3>
+                        <p>이곳은 메뉴 2의 콘텐츠입니다.</p>
+                    </div>
+                    <div class="tab-content" id="content3">
+                        <h3>콘텐츠 3</h3>
+                        <p>이곳은 메뉴 3의 콘텐츠입니다.</p>
+                    </div>
+                    <div class="tab-content" id="content4">
+                        <h3>콘텐츠 4</h3>
+                        <p>이곳은 메뉴 4의 콘텐츠입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<script>
+
+</script>
+
+</html>

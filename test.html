@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>사이드바 탭 메뉴</title>
+<style>
+input[type="radio"] {
+display: none;
+}
+
+.tab-container {
+display: flex;
+border: 1px solid #ccc;
+min-height: 200px;
+}
+
+.tab-menu {
+display: flex;
+flex-direction: column;
+width: 150px;
+border-right: 2px solid #ccc;
+}
+
+.tab-menu label {
+padding: 15px;
+cursor: pointer;
+background: gray;
+border-bottom: 1px solid #ccc;
+}
+
+.tab-menu label:hover {
+background: lightgray;
+}
+
+.tabs {
+flex-grow: 1;
+padding: 20px;
+background: yellow;
+}
+
+.tab-content {
+display: none;
+}
+
+/* 선택된 탭 콘텐츠 보이기 */
+#tab1:checked ~ .tab-container .tabs #content1,
+#tab2:checked ~ .tab-container .tabs #content2,
+#tab3:checked ~ .tab-container .tabs #content3,
+#tab4:checked ~ .tab-container .tabs #content4 {
+display: block;
+}
+
+/* 선택된 탭 메뉴 강조 */
+#tab1:checked ~ .tab-container .tab-menu label[for="tab1"],
+#tab2:checked ~ .tab-container .tab-menu label[for="tab2"],
+#tab3:checked ~ .tab-container .tab-menu label[for="tab3"],
+#tab4:checked ~ .tab-container .tab-menu label[for="tab4"] {
+background: red;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<input type="radio" name="tab" id="tab1" checked>
+<input type="radio" name="tab" id="tab2">
+<input type="radio" name="tab" id="tab3">
+<input type="radio" name="tab" id="tab4">
+
+<div class="tab-container">
+<div class="tab-menu">
+<label for="tab1">메뉴 1</label>
+<label for="tab2">메뉴 2</label>
+<label for="tab3">메뉴 3</label>
+<label for="tab4">메뉴 4</label>
+</div>
+
+<div class="tabs">
+<div class="tab-content" id="content1">
+<h3>콘텐츠 1</h3>
+<p>이곳은 메뉴 1의 콘텐츠입니다.</p>
+</div>
+<div class="tab-content" id="content2">
+<h3>콘텐츠 2</h3>
+<p>이곳은 메뉴 2의 콘텐츠입니다.</p>
+</div>
+<div class="tab-content" id="content3">
+<h3>콘텐츠 3</h3>
+<p>이곳은 메뉴 3의 콘텐츠입니다.</p>
+</div>
+<div class="tab-content" id="content4">
+<h3>콘텐츠 4</h3>
+<p>이곳은 메뉴 4의 콘텐츠입니다.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

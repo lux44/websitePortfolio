@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio_website</title>
+    <style>
+        body {
+            background-color: #275982;
+        }
+        .navlink {
+            margin-right: 20px;
+            font-size: 16px;
+            color: azure;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body style="margin: 20px 30px;">
+    <header>
+        <nav style="display: flex;  justify-content: space-between;">
+            <!-- 헤더 부분 -->
+            <img src="./logo_image.png" alt="this is logo image" style="width: 100px; height: 100px; justify-content: flex-start;">
+            <ol style="display: flex; justify-content: flex-end;">
+                <!-- todo:  hover, 이동 기능 -->
+                <a class="navlink" href="#aboutme" >About</a>
+                <a class="navlink" href="#skills">Skill</a>
+                <a class="navlink" href="#projects">Project</a>
+            </ol>
+        </nav>
+        <main>
+            <div id="intro" style="width: 100%; height: 200px; background-color: #71b982;">
+                <h5>Hello</h5>
+                <h1>This is Me</h1>
+                <p>Welcome to my website</p>
+                <div>
+                    <!-- 깃헙, 티스토리 이미지 영역 todo: 링크이동, 로고 이미지 change -->
+                    <a href="#tistory"><img style="width: 30px; height: 30px;" src="./logo_image.png" alt="tistory"></a>
+                    <a href="#github"><img style="width: 30px; height: 30px;" src="./logo_image.png" alt="github"></a>
+                </div>
+            </div>
+
+            <div id="aboutme" style="width: 100%; height: 300px; background-color: #d7e29c;">
+                <div style="display: flex; flex-direction: row;">
+                    <p>01</p>
+                    <p>AboutMe</p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <!-- 프로젝트들 캡쳐화면으로 이미지 박아놓고 공간 차지 -->
+                    <!-- todo: 이미지 만들기 -->
+                </div>
+            </div>
+
+            <div id="skills" style="width: 100%; height: 300px; background-color: #a2f432;">
+                <!-- todo: js 동작필요 -->
+                <div style="display: flex; flex-direction: row;">
+                    <p>02</p>
+                    <p>Skills</p>
+                </div>
+                <div id="skill_stack" style="display: flex; flex-direction: row;">
+                    <!-- todo: 클릭할 때마다 프로그레스바도 움직여야 함 -->
+                    <div>progress bar 비슷한 애들놓을 위치</div>
+                    <div id="skill_kind" style="display: flex; flex-direction: column;">
+                        <ul>
+                            <li>Langauge</li>
+                            <li>Frontend</li>
+                            <li>BackEnd</li>
+                            <li>Database</li>
+                            <li>etc</li>
+                        </ul>
+                    </div>
+                    <div id="langauge_list_div">
+                        <!-- todo: list 클릭할 때마다 화면이 바뀌어야 함 js 동작필요 -->
+                        <div style="display: flex; flex-direction: row;">
+                            <p>Skill Stack</p>
+                            <p>여긴 변경되는 값(텍스트)필요</p>
+                        </div>
+                        <ul id="language_list">
+                            <li style="display: flex; flex-direction: row;">
+                                <img src="./fantoo_loding1.png" alt="언어에 맞는 이미지" style="width: 40px; height: 40px;">
+                                <div>
+                                    <p>language</p>
+                                    <p>language explain</p>
+                                </div>
+                            </li>
+                            <li>HTML5</li>
+                            <li>Kotlin</li>
+                            <li>Java</li>
+                            <li>Compose</li>
+                            <li>Python</li>
+                            <li>C</li>
+                        </ul>
+                        <!-- <ul id="frontend_list" style="visibility: hidden;">
+                            <li>android</li>
+                            <li>react native</li>
+                            <li>web</li>
+                        </ul>
+                        <ul id="backend_list" style="visibility: hidden;">
+                            <li>배울 예정</li>
+                        </ul>
+                        <ul id="database_list" style="visibility: hidden;">
+                            <li>배울 예정</li>
+                        </ul>
+                        <ul id="etc_list" style="visibility: hidden;">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>GitLab</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </header>
+    <main>
+
+    </main>
+</body>
+</html>
