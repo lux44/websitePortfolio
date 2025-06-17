@@ -115,6 +115,39 @@
             color: #91FCDC;
             font-weight: bold;
         }
+
+        .abcTab {
+            display: flex;
+            border: solid #8A92AD;
+            align-items: center;
+            justify-content: space-evenly;
+            width: auto;
+            height: 50px;
+            background-color: #8A92AD;
+        }
+
+        .abcTab label {
+            cursor: pointer;
+        }
+
+        .abcTab label:hover {
+            background: lightgray;
+        }
+
+        /* 선택된 탭 콘텐츠 보이기 */
+        /* #tabA:checked~.abcTab {
+            display: block;
+        } */
+
+        /* 선택된 탭 메뉴 강조 */
+        #tabA:checked~.abcTab label[for="tabA"],
+        #tabB:checked~.abcTab label[for="tabB"],
+        #tabC:checked~.abcTab label[for="tabC"] {
+            color: #91FCDC;
+            font-weight: bold;
+        }
+
+
     </style>
 </head>
 
@@ -290,6 +323,24 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            <input type="radio" name="projectTab" id="tabA">
+            <input type="radio" name="projectTab" id="tabB">
+            <input type="radio" name="projectTab" id="tabC">
+
+            <div style="padding:15px 0px;">
+                <span style="color: #91FCDC;">03.</span>
+                <span style="color: #CED6F3; font-weight: 500; font-size: 35px;">Projects</span>
+            </div>
+
+            <div class="abcTab">
+                <label for="tabA">Personal</label>
+                <label for="tabB">Team</label>
+                <label for="tabC">Work</label>
+            </div>
+        </section>
+
     </div>
 </body>
 
